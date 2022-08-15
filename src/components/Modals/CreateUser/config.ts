@@ -1,0 +1,178 @@
+import type { InputType } from 'config'
+import { states } from 'config/states.constants'
+
+export const accountTypes: Record<string, string> = {
+  admin: 'Admin',
+  uw_manager: 'UW Manager',
+  underwriter: 'UnderWriter',
+  appraiser: 'Appraiser',
+  loan_setup: 'Loan Setup',
+  disclosure_spec: 'Disclosure Specialist',
+  lock_desk: 'Lock Desk',
+  national_sale: 'National Sales',
+  operation_supervisor: 'Operation Supervisor',
+  closer: 'Closer',
+  post_closer: 'Post Closer',
+  account_manager: 'Account Manager',
+  account_executive: 'Account Executive',
+  broker: 'Broker',
+  correspondent: 'Correspondent',
+  branch: 'Branch',
+  loan_officer: 'Loan Officer',
+  loan_processor: 'Loan Processor',
+}
+
+export const defaultInputs = (): Record<string, InputType> => {
+  return {
+    accountType: {
+      title: 'Account Type',
+      inputType: 'select',
+      options: accountTypes,
+      visible: true,
+      hasDefaultOption: false,
+      required: true,
+    },
+    accountExecutive: {
+      title: 'Account Executive Associated With',
+      inputType: 'select',
+      options: [],
+      hasDefaultOption: true,
+      value: '0',
+      required: true,
+    },
+    broker: {
+      title: 'Broker Associated With',
+      inputType: 'select',
+      options: [],
+      hasDefaultOption: true,
+      value: '0',
+      required: true,
+    },
+    branch: {
+      title: 'Branch Associated With',
+      inputType: 'select',
+      options: [],
+      required: false,
+      hasDefaultOption: true,
+      defaultOptionText: 'Main Office',
+      allowDefaultOption: true,
+      value: '0',
+    },
+    name: {
+      inputType: 'text',
+      title: 'Full Name',
+      required: true,
+    },
+    email: {
+      inputType: 'text',
+      type: 'email',
+      title: 'Email',
+      required: true,
+    },
+    phone: {
+      inputType: 'text',
+      type: 'phone',
+      title: 'Phone Number',
+      required: true,
+    },
+    phoneExt: {
+      inputType: 'text',
+      type: 'phone',
+      title: 'Phone Ext',
+      required: false,
+    },
+    street: {
+      inputType: 'text',
+      title: 'Street Address',
+      required: true,
+    },
+    city: {
+      inputType: 'text',
+      title: 'City',
+      required: true,
+    },
+    state: {
+      inputType: 'select',
+      title: 'State',
+      options: states,
+      hasDefaultOption: true,
+      required: true,
+    },
+    zip: {
+      inputType: 'text',
+      type: 'number',
+      title: 'Zip',
+      required: true,
+    },
+    companyName: {
+      inputType: 'text',
+      title: 'Company Name',
+      required: true,
+    },
+    companyNmls: {
+      inputType: 'text',
+      type: 'number',
+      title: 'Company NMLS ID',
+      required: false,
+    },
+    branchNmls: {
+      inputType: 'text',
+      title: 'Branch NMLS ID',
+      required: true,
+    },
+    companyLicense: {
+      inputType: 'text',
+      title: 'Company State license ID',
+      required: false,
+    },
+    loanOfficer: {
+      inputType: 'text',
+      title: 'Loan Officer NMLS ID',
+      required: true,
+    },
+    minCompensation: {
+      inputType: 'text',
+      type: 'number',
+      title: 'Min Compensation',
+      required: false,
+      prefix: '%',
+    },
+    maxCompensation: {
+      inputType: 'text',
+      type: 'number',
+      title: 'Max Compensation',
+      required: false,
+      prefix: '%',
+    },
+    brokerCompensation: {
+      inputType: 'text',
+      type: 'number',
+      title: 'Broker/Branch Compensation',
+      required: false,
+      prefix: '%',
+    },
+    loanOfficerStateLicense: {
+      inputType: 'text',
+      title: 'Loan Officer State license ID',
+      required: false,
+    },
+    businessPurpose: {
+      inputType: 'check',
+      title: 'Business Purpose Eligible?',
+      value: true,
+      required: false,
+    },
+    condoReview: {
+      inputType: 'check',
+      title: 'Condo Review Eligible?',
+      value: false,
+      required: false,
+    },
+    showGenerateDocuments: {
+      inputType: 'check',
+      title: 'Show generate documents?',
+      value: false,
+      required: false,
+    },
+  }
+}

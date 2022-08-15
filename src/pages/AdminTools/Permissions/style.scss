@@ -1,0 +1,55 @@
+.permissions-container {
+  overflow: scroll;
+
+  table {
+    border-collapse: collapse;
+    white-space: nowrap;
+    @apply table-fixed ;
+
+    td, th {
+      border: 1px solid;
+      @apply border-gray-300;
+      @apply px-2;
+    }
+
+    thead {
+      th {
+        text-align: left;
+        @apply bg-zinc-100 text-xs py-2;
+      }
+    }
+    tbody {
+      td {
+        padding-right: 2em;
+        @apply text-sm;
+      }
+    }
+    td {
+      cursor: pointer;
+
+      .allowed {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin-right: 5px;
+          border-radius: 3px;
+          @apply bg-green-500;
+        }
+      }
+
+      .restricted {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin-right: 5px;
+          border-radius: 3px;
+          @apply bg-red-500;
+        }
+      }
+    }
+  }
+}

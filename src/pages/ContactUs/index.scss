@@ -1,0 +1,30 @@
+.ContactUs-container {
+  .about-image {
+    position: relative;
+    img {
+      position: absolute;
+      display: flex;
+      top: -64px;
+      left: 66px;
+  
+      @media (max-width: 85em) {
+        left: 40px;
+      }
+  
+      @media (max-width: 80em) {
+        max-width: 100%;
+        height: auto;
+      }
+  
+      @media (max-width: 64em) {
+        top: -8px;
+        left: 12px;
+      }
+  
+      @media (max-width: 40em) {
+        position: static;
+        max-width: 343px;
+      }
+    }
+  }
+}

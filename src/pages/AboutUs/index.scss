@@ -1,0 +1,56 @@
+.aboutus-container {
+  .about-image {
+    position: relative;
+    img {
+      position: absolute;
+      display: flex;
+      top: -64px;
+      left: 66px;
+      max-width: 520px;
+      @media (max-width: 85em) {
+        left: 40px;
+      }
+  
+      @media (max-width: 80em) {
+        max-width: 100%;
+        height: auto;
+      }
+  
+      @media (max-width: 64em) {
+        top: -8px;
+        left: 12px;
+      }
+  
+      @media (max-width: 40em) {
+        position: static;
+        max-width: 343px;
+      }
+    }
+  }
+  .button {
+    position: relative;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 130%;
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 13.5px 24px;
+    box-shadow: 0px 20px 30px rgba(21, 23, 61, 0.07);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: color 0.3s, background-color 0.3s;
+    background: linear-gradient(116.71deg, #41a1fb 16.26%, #005ae1 81.21%);
+  
+    &:hover {
+      color: #2d6af6;
+      text-decoration: none;
+      background: none;
+      background-color: #f4f8ff !important;
+    }
+  }
+}

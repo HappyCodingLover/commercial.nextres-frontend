@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root,
+#root > div:first-child,
+.h-full-screen {
+  min-height: 100vh;
+}
+
+.shadow1 {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.hover-shadow1 {
+  &:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+}
+
+.header-profile-name {
+  margin-right: -21px !important;
+}
+
+.input2read-label {
+  width: calc(100% - 20px);
+}
+
+@font-face {
+  font-family: work-sans;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGYsz_wNahGAdqQ43Rh_fKDp.woff2);
+}
+
+.main {
+  min-height: calc(100vh - 426px);
+  color: #4d5154 !important;
+  font-family: "Work Sans";
+}
+
+.font-variation-settings-400 {
+  font-variation-settings: "wght" 400;
+}
+
+.font-variation-settings-500 {
+  font-variation-settings: "wght" 500;
+}
+
+.font-variation-settings-600 {
+  font-variation-settings: "wght" 600;
+}
+
+.font-variation-settings-700 {
+  font-variation-settings: "wght" 700;
+}
+
+.font-variation-settings-800 {
+  font-variation-settings: "wght" 800;
+}
+
+.NotReviewed {
+  background-color: #ffffff;
+}
+.Approved {
+  background-color: #d4edda;
+}
+.Inactive {
+  background-color: #e2e3e5;
+}
+.Incomplete {
+  background-color: #f8d7da;
+}
+.MissingPages {
+  background-color: #ffc0cb;
+}
+.Unacceptable {
+  background-color: #fff3cd;
+}
+.Duplicate {
+  background-color: #fdf5e6;
+}
+.Illegible {
+  background-color: #faebd7;
+}
+.Reviewed {
+  background-color: #cce5ff;
+}
